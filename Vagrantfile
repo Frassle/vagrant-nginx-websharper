@@ -41,8 +41,8 @@ Vagrant.configure("2") do |config|
   config.vm.provider :virtualbox do |vb|
     # Don't boot with headless mode
     vb.gui = true
-	vb.name = "trusty_nginx_mono"
-	vb.customize ["modifyvm", :id, "--memory", "4096"]
+    vb.name = "trusty_nginx_mono"
+    vb.customize ["modifyvm", :id, "--memory", "4096"]
   #
   #   # Use VBoxManage to customize the VM. For example to change memory:
   #   vb.customize ["modifyvm", :id, "--memory", "1024"]
@@ -73,10 +73,10 @@ Vagrant.configure("2") do |config|
   #   puppet.manifests_path = "manifests"
   #   puppet.manifest_file  = "init.pp"
   # end
-  
+
   config.vm.provision :shell, :path => "provisioning/provision.sh"
   config.vm.provision :shell, :path => "provisioning/install_nginx.sh"
-  #  config.vm.provision :shell, :path => "provisioning/install_fsharp.sh"
+  config.vm.provision :shell, :path => "provisioning/install_fsharp.sh"
 
   # Enable provisioning with chef solo, specifying a cookbooks path, roles
   # path, and data_bags path (all relative to this Vagrantfile), and adding
