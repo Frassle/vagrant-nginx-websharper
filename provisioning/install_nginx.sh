@@ -1,7 +1,7 @@
 #!/bin/bash
 
 cp /vagrant/provisioning/nginx/sites-available/default /etc/nginx/sites-available/default
-cp /vagrant/provisioning/nginx/fastcgi_params /etc/nginx/sites-available/fastcgi_params
+cp /vagrant/provisioning/nginx/fastcgi_params /etc/nginx/fastcgi_params
 
 mkdir /etc/init.d/mono-fastcgi
 cp /vagrant/provisioning/localhost.webapp /etc/init.d/mono-fastcgi/localhost.webapp

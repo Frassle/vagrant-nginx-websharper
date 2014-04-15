@@ -28,7 +28,6 @@ server {
 	server_name localhost;
 
 	location / {
-		fastcgi_index /index.html;
 		fastcgi_pass 127.0.0.1:9000;
 		include /etc/nginx/fastcgi_params;
 	}
