@@ -12,3 +12,6 @@ touch /var/log/mono/fastcgi.log
 chmod -R a+rw /var/log/mono
 
 cp /vagrant/provisioning/fastcgi-mono-server.conf /etc/init/fastcgi-mono-server.conf
+
+service fastcgi-mono-server start
+service nginx restart
